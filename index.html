@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vilkas ir višta</title>
+    <style>
+        .page {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .page img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .navigation a {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .navigation a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="page" id="page1">
+        <img src="page1.jpeg" alt="Puslapio 1 paveiksliukas">
+        <p>
+            Sniegu padengtame miške, gilią žiemos naktį, gyveno vilkas vardu Nojus. Jis troško skanaus Prime gėrimo, kurį rado apleistoje troboje. Tačiau gėrimą saugojo višta vardu Janina, žinoma iš savo drąsos ir gudrumo.
+        </p>
+        <div class="navigation">
+            <a href="#" onclick="showPage(2)">Kitas puslapis</a>
+        </div>
+    </div>
+
+    <div class="page" id="page2" style="display: none;">
+        <img src="page2.jpeg" alt="Puslapio 2 paveiksliukas">
+        <p>
+          Nojus, vedamas godumo, nusprendė pagauti Janiną ir atimti iš jos brangųjį Prime. Pasinaudojęs tamsos priedanga, jis sėlino prie vištidės, pasiruošęs pulti. Staiga Janina, netikėtai užklupta, parodė neįtikėtiną drąsą. Ji puolė vilką, spardydamasi ir sparnais mosuodama, kol pavyko iš jo pagrobti Prime gėrimą.
+          Nojus, įniršęs dėl tokios įžūlumo, puolė Janiną ir prarijo ją visą. Tačiau višta nepasidavė. Ji kudakavo ir spardėsi vilko pilve, sukeldamas jam nepakeliamą skausmą.
+        </p>
+        <div class="navigation">
+            <a href="#" onclick="showPage(1)">Ankstesnis puslapis</a>
+            <a href="#" onclick="showPage(3)">Kitas puslapis</a>
+        </div>
+    </div>
+
+    <div class="page" id="page3" style="display: none;">
+        <img src="page3.jpeg" alt="Puslapio 3 paveiksliukas">
+        <p>
+          Netrukus pro šalį ėjo princesė, žinoma dėl savo gerumo ir rūpesčio gyvūnais. Išgirdusi keistą triukšmą iš vilko pilvo, ji suprato, kad viduje yra pagrobtoji Janina. Nedvejodama princesė atvėrė vilko nasrus ir ištraukė vištą.
+          Janina, nors ir pavargus, bet gyva, dėkojo princesei už išgelbėjimą. O princesė, žvelgiant į Prime gėrimą, negalėjo atsispirti pagundai. Ji gurkštelėjo žalio skysčio ir staiga, burtų galia, ji pavirto žaliuoju ogriu - Šreku.
+        </p>
+        <div class="navigation">
+            <a href="#" onclick="showPage(2)">Ankstesnis puslapis</a>
+            <a href="#" onclick="showPage(4)">Kitas puslapis</a>
+        </div>
+    </div>
+
+    <div class="page" id="page4" style="display: none;">
+        <img src="page4.jpeg" alt="Puslapio 4 paveiksliukas">
+        <p>
+          Nuo tada Šrekas, Janina ir Nojus tapo neįprastais draugais. Jie kartu nuotykiavo po snieguotą mišką, dalydamiesi Prime gėrimu ir rūpindamiesi vieni kitais, įrodydami, kad net ir žiemą draugystė ir drąsa gali nugalėti tamsą ir godumą.
+        </p>
+        <div class="navigation">
+            <a href="#" onclick="showPage(3)">Ankstesnis puslapis</a>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageNumber) {
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+            document.getElementById('page' + pageNumber).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
